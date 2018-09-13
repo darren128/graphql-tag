@@ -5,9 +5,12 @@
   "main": "./lib/graphql-tag.umd.js",
   "module": "./src/index.js",
   "jsnext:main": "./src/index.js",
+  "engines": {
+    "node": ">= 6.x"
+  },
   "scripts": {
     "bundle": "rollup -c && cp src/index.js.flow lib/graphql-tag.umd.js.flow",
-    "test": "mocha test/graphql.js test/graphql-v0.12.js && tav --ci --compat",
+    "test": "mocha test/graphql.js && tav --ci --compat",
     "prepublish": "npm run bundle"
   },
   "repository": {
@@ -31,6 +34,6 @@
     "test-all-versions": "^3.3.2"
   },
   "peerDependencies": {
-    "graphql": "^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0"
+    "graphql": "^14.0.0"
   }
 }
